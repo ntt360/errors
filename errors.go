@@ -241,7 +241,7 @@ type withMessage struct {
 	msg   string
 }
 
-func (w *withMessage) Error() string { return w.msg + ": " + w.cause.Error() }
+func (w *withMessage) Error() string { return w.msg }
 func (w *withMessage) Cause() error  { return w.cause }
 
 // Unwrap provides compatibility for Go 1.13 error chains.
